@@ -1,0 +1,6 @@
+{
+  "name": "Việt Phục Remix - Digital Exhibition",
+  "description": "Không gian triển lãm số tôn vinh dòng chảy di sản Việt phục và cảm hứng đương đại",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

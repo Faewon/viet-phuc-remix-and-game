@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #030303;
+    color: #f5f5f0;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
+  }
+}
+
+.gallery-spotlight {
+  background: radial-gradient(
+    ellipse at 50% 32%,
+    rgba(255, 248, 235, 0.15) 0%,
+    rgba(255, 240, 220, 0.06) 42%,
+    rgba(5, 5, 5, 0) 72%
+  );
+}
+
+.pedestal-glow {
+  background: radial-gradient(
+    ellipse at 50% 85%,
+    rgba(255, 235, 200, 0.07) 0%,
+    rgba(0, 0, 0, 0) 65%
+  );
+}

@@ -56,24 +56,47 @@ export const GameInstallationRoom: React.FC<GameInstallationRoomProps> = ({
           {garment.garmentName} ({garment.period})
         </p>
 
-        {/* Dedicated Game Slot - Left clean and unencumbered as requested */}
-        <div className="w-full max-w-2xl h-64 sm:h-80 border border-stone-900 bg-stone-950/80 flex flex-col items-center justify-center p-6 relative overflow-hidden group">
-          {/* Subtle architectural grid lines */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f1f1f0a_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f0a_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
-
-          {/* Central silent installation focus */}
-          <div className="relative z-10 flex flex-col items-center text-center max-w-md">
-            <div className="w-10 h-10 border border-stone-800 rounded-full flex items-center justify-center mb-4 text-[#D4AF37]">
-              <Compass className="w-4 h-4" />
+        {/* Dedicated Game Installation Viewport - Embedded An Visual Novel */}
+        <div className="w-full max-w-4xl border border-stone-800 bg-stone-950/90 flex flex-col items-center relative overflow-hidden rounded-lg shadow-2xl">
+          {/* Top Frame Bar with Status & Controls */}
+          <div className="w-full px-4 py-2.5 bg-stone-900/90 border-b border-stone-800/80 flex items-center justify-between text-xs">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
+              <span className="font-serif tracking-wider text-stone-300 uppercase">
+                AN: VỌNG CẢNH Y PHỤC · VISUAL NOVEL
+              </span>
             </div>
+            <a
+              href="https://faewon.itch.io/gameanvisualnovel"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#D4AF37] hover:text-[#f3cc54] transition-colors font-mono text-[11px] underline underline-offset-2"
+            >
+              Mở trên Itch.io ↗
+            </a>
+          </div>
 
-            <p className="text-sm font-serif text-stone-300 mb-2">
-              Không gian trải nghiệm tương tác số
-            </p>
-
-            <p className="text-xs text-stone-500 font-light leading-relaxed">
-              Ô tương tác này được bố trí tĩnh tại theo không gian trưng bày của triển lãm, phản ánh dòng thời gian lịch sử của triều đại {garment.dynastyName}.
-            </p>
+          {/* Iframe Viewport: 16:9 ratio */}
+          <div className="w-full relative aspect-video bg-black flex items-center justify-center">
+            <iframe
+              src="https://itch.io/embed-upload/12500000?color=050505"
+              title="An - Vọng Cảnh Y Phục Visual Novel"
+              className="w-full h-full border-0"
+              allowFullScreen
+              allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated"
+            />
+            {/* Direct fallback overlay banner if embed-upload requires direct link */}
+            <div className="absolute bottom-3 right-3 z-20 pointer-events-auto">
+              <a
+                href="https://faewon.itch.io/gameanvisualnovel"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-black/80 hover:bg-black text-[11px] font-mono text-stone-300 hover:text-white border border-stone-800 rounded transition-all backdrop-blur-sm"
+              >
+                <span>Toàn màn hình</span>
+                <span className="text-[#D4AF37]">↗</span>
+              </a>
+            </div>
           </div>
 
           {/* Minimalist framing corners */}

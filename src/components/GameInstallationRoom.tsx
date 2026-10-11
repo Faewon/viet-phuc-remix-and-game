@@ -79,7 +79,7 @@ export const GameInstallationRoom: React.FC<GameInstallationRoomProps> = ({
           {/* Iframe Viewport: 16:9 ratio */}
           <div className="w-full relative aspect-video bg-black flex items-center justify-center">
             <iframe
-              src="https://itch.io/embed-upload/12500000?color=050505"
+              src="https://itch.io/embed-upload/19674683?color=050505"
               title="An - Vọng Cảnh Y Phục Visual Novel"
               className="w-full h-full border-0"
               allowFullScreen
